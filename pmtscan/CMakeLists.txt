@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 project(pmtscan)
 
-find_package(Gnuradio "3.10" COMPONENTS
+find_package(Gnuradio "3.9" COMPONENTS
     blocks
     fec
     fft
