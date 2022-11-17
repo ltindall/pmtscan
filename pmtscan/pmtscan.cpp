@@ -27,13 +27,13 @@ pmtscan::pmtscan ()  {
         this->uhd_usrp_source_0->set_gain(40, 0);
         this->uhd_usrp_source_0->set_antenna("TX/RX", 0);
 
-        this->habets39_sweepsinkv_0 = gr::habets39::sweepsinkv::make('rx_freq', points, samp_rate, freq_start, freq_end, tune_step_hz, tune_step_fft);
+        this->habets39_sweepsinkv_0 = gr::habets39::sweepsinkv::make("rx_freq", points, samp_rate, freq_start, freq_end, tune_step_hz, tune_step_fft);
 
-        this->fft_vxx_0 = fft::fft_vcc::make(points, true, fft::window::blackmanharris(points), true, 1);
+        this->fft_vxx_0 = fft::fft_v<gr_complex, true>::make(points, fft::window::blackmanharris(points), true, 1);
 
         this->blocks_stream_to_vector_0 = blocks::stream_to_vector::make(sizeof(gr_complex)*1, points);
 
-        this->blocks_file_sink_0 = blocks::file_sink::make(sizeof(char)*1, 'test.tsv', false);
+        this->blocks_file_sink_0 = blocks::file_sink::make(sizeof(char)*1, "test.tsv", false);
 
         this->blocks_complex_to_mag_0 = blocks::complex_to_mag::make(points);
 

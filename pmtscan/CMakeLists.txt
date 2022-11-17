@@ -41,6 +41,6 @@ target_link_libraries(pmtscan
     gnuradio::gnuradio-blocks
     gnuradio-uhd uhd
     gnuradio::gnuradio-fft
-
+    gnuradio-habets39
 )
 

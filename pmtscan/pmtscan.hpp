@@ -15,7 +15,7 @@ GNU Radio version: 3.10.1.1
 #include <gnuradio/blocks/file_sink.h>
 #include <gnuradio/blocks/stream_to_vector.h>
 #include <gnuradio/fft/fft.h>
-#include <gnuradio/fft/fft_vcc.h>
+#include <gnuradio/fft/fft_v.h>
 #include <gnuradio/fft/window.h>
 #include <habets39/sweepsinkv.h>
 #include <gnuradio/uhd/usrp_source.h>
@@ -33,7 +33,7 @@ private:
 
     gr::uhd::usrp_source::sptr uhd_usrp_source_0;
     gr::habets39::sweepsinkv::sptr habets39_sweepsinkv_0;
-    fft::fft_vcc::sptr fft_vxx_0;
+    fft::fft_v<gr_complex, true>::sptr fft_vxx_0;
     blocks::stream_to_vector::sptr blocks_stream_to_vector_0;
     blocks::file_sink::sptr blocks_file_sink_0;
     blocks::complex_to_mag::sptr blocks_complex_to_mag_0;
