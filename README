@@ -2,6 +2,9 @@
 
 Tested on Ubuntu 22.04.1, stock gnuradio 3.10.1.1/(Python 3.10.6).
 
+gnuradio-companion generates incorrect C++ code (incorrect char const, etc),
+so to tune edit pmtscan.hpp and recompile.
+
 ```
 # apt-get install gnuradio-dev
 # git clone https://github.com/anarkiwi/gr-habets39 -b st3
