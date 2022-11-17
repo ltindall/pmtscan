@@ -6,9 +6,9 @@ gnuradio-companion generates incorrect C++ code (incorrect char const, etc),
 so to tune edit pmtscan.hpp and recompile.
 
 ```
-# apt-get install gnuradio-dev
-# git clone https://github.com/anarkiwi/gr-habets39 -b st3
-# cd gr-habets39 && mkdir build && cd build && cmake .. && make && make install && ldconfig && cd ../..
-# mkdir pmtscan/build && cd pmtscan/build && cmake .. && make
-# ./pmtscan
+$ sudo apt-get install gnuradio-dev
+$ git clone https://github.com/anarkiwi/gr-habets39 -b st3
+$ cd gr-habets39 && mkdir build && cd build && cmake .. && make && sudo make install && sudo ldconfig && cd ../..
+$ mkdir pmtscan/build && cd pmtscan/build && cmake .. && make
+$ ./pmtscan
 ```
